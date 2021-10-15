@@ -95,7 +95,97 @@ public class Tareasupeu{
           System.out.print(" y el descuento es: "+descuento);
           System.out.println();
         }
-        System.out.print("el pago total es de : "+pagoT);
+        System.out.print(" el pago total es de : "+pagoT);
+  }
+  static void ejercicio6(){
+    int presupuesto;
+     System.out.print(" Ingresar el valor de presupuesto: ");
+     presupuesto = sc.nextInt();
+     sc.nextLine();
+     if(presupuesto<=10)
+     System.out.print(" podra adquirir tarjetas: ");
+     if(presupuesto>10 && presupuesto<=100)
+     System.out.print(" podra adquirir chocolates: ");
+      if(presupuesto>100 && presupuesto<=250)
+     System.out.print(" podra adquirir flores: ");
+     if(presupuesto>250)
+     System.out.print(" podra adquirir un anillo: ");
+  }
+  static void ejercicio7(){
+    double bono, puntos, salario;
+    System.out.print(" Ingresar los puntos: ");
+     puntos = sc.nextInt();
+     sc.nextLine();
+     System.out.print(" Ingresar el salario: ");
+     salario = sc.nextInt();
+     sc.nextLine();
+     bono=0;
+     if(puntos<=100)
+     bono=salario;
+     if(puntos>100 && puntos<=150)
+     bono=salario*2;
+     if(puntos>150)
+     bono=salario*3;
+     System.out.print(" su bono es de "+bono+" por tener "+puntos+" puntos ");
+  }
+  static void ejercicio8(){
+    double beca, edad, promedio;
+     System.out.println("Ingresar edad:");
+    edad=sc.nextDouble();
+    sc.nextLine();
+    System.out.println("Ingresar promedio:");
+    promedio=sc.nextDouble();
+    sc.nextLine();
+    beca=0;
+    if(edad>18&&promedio>=9)
+            beca=2000;
+    if(edad>18&&promedio>=7.5&&promedio<9)
+            beca=1000;
+    if(edad>18&&promedio>=6&&promedio<7.5)
+            beca=500;
+    if(edad<=18&&promedio>=9)
+            beca=3000;
+    if(edad<=18&&promedio>=8&&promedio<9)
+            beca=2000;
+    if(edad<=18&&promedio<=6&&promedio<8)
+            beca=1000;
+    if(promedio<6)
+    System.out.println(" esfuerzate mas para la proxima ");
+    System.out.println(" valor de beca: "+beca);
+  }
+  static void ejercicio9(){
+    int calificacion;
+     System.out.println(" Ingresar calificacion: ");
+    calificacion=sc.nextInt();
+    sc.nextLine();
+    if(calificacion==10)
+    System.out.println(" obtubo una calificacion A ");
+    if(calificacion==9)
+    System.out.println(" obtubo una calificacion B ");
+    if(calificacion==8)
+    System.out.println(" obtubo una calificacion C ");
+    if(calificacion<=7 && calificacion>=6)
+    System.out.println(" obtubo una calificacion D ");
+    if(calificacion<=5 && calificacion>=0)
+    System.out.println(" obtubo una calificacion F ");
+  }
+  static void ejercicio10(){
+    double dinerorecibido;
+    System.out.println(" Ingresar dinero recibido: ");
+    dinerorecibido=sc.nextInt();
+    sc.nextLine();
+      if(dinerorecibido>=50000)
+            System.out.println("Paquete A");
+            System.out.println("Television,"+ "Un modular,"+"Tres parese de Zapatos,"+"cinco camisas,"+"y cinco pantalones.");
+        if(dinerorecibido>=20000&&dinerorecibido<50000)
+            System.out.println("Paquete B");
+            System.out.println("una grabadora,"+" tres pares de zapatos," +"cinco camisas"+ "y cinco pantalones");
+        if(dinerorecibido>=10000&&dinerorecibido<20000)
+            System.out.println("Paquete C");
+            System.out.println("dos pares de zapatos,"+ "tres camisas"+ "y tres pantalones.");
+        if(dinerorecibido<10000)
+            System.out.println("Paquete D");
+            System.out.println("un par de zapatos,"+" dos camisas " +"y dos pantalones.");
   }
   
  static void menudeopciones(){
@@ -112,6 +202,16 @@ public class Tareasupeu{
     System.out.println(msg4);
      String msg5= " ejercicio5 (5)";
     System.out.println(msg5);
+    String msg6= " ejercicio6 (6)";
+    System.out.println(msg6);
+     String msg7= " ejercicio7 (7)";
+    System.out.println(msg7);
+     String msg8= " ejercicio8 (8)";
+    System.out.println(msg8);
+     String msg9= " ejercicio9 (9)";
+    System.out.println(msg9);
+    String msg10= " ejercicio10 (10)";
+    System.out.println(msg10);
 
       opcionesA=sc.nextInt();  
       while(opcionesA!=0){
@@ -121,6 +221,11 @@ public class Tareasupeu{
           case 3:ejercicio3();break;
           case 4:ejercicio4();break;
           case 5:ejercicio5();break;
+          case 6:ejercicio6();break;
+          case 7:ejercicio7();break;
+          case 8:ejercicio8();break;
+          case 9:ejercicio9();break;
+          case 10:ejercicio10();break;
 
            default:
           System.out.println("El Algoritmo no existe!");
